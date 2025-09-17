@@ -1,49 +1,72 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- completa -->
-         <meta charset= "UTF- 8">
-         <title>
-            UAB/Enginyeria
-         </title>
-    </head>
-    <body>
-        <!-- SECCIÓ 1 - Capçalera -->
+
+<head>
+    <!-- completa -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAB/Enginyeria</title>
+</head>
+
+<body>
+    <!-- SECCIÓ 1 - Capçalera -->
+    <header>
+        <a href="http://www.uab.es" target="_blank">
+            <img src="./img/uab.png" alt="UAB logo" width="40%">
+        </a>
+        <h1>Enginyeria Informatica</h1>
+        <p>Benviguts a l'escola d'Enginyeria</p>
+    </header>
+    <hr>
+    <!-- SECCIÓ 2 - Llistat dels diferents graus que ofereix l’escola d’enginyeria -->
+    <section>
+
+        <h3>Graus disponibles: </h3>
+
+        <ul>
+            <li>
+                <a href="https://www.uab.es/enginyeria">Enginyeria Informatica </a>
+                <ul>
+                    <li>TI</li>
+                    <li>ES</li>
+                </ul>
+            </li>
+            <li>Enginyeria de Sistemas de Telecomunicaciones</li>
+            <li>Enginyeria de Electronica de Telecomunicaciones</li>        
+        </ul>
+    </section>
+    <!-- SECCIÓ 3 - Formulari de registre -->
+    <section>
         <header>
-            <!-- completa -->
+            <h3>Registra't com a alumne en un grau: </h3>
         </header>
-        <!-- SECCIÓ 2 - Llistat dels diferents graus que ofereix l’escola d’enginyeria -->
-        <section>
-            <header>
-                <h3>Graus disponibles: </h3>
-            </header>
-            <ul>
-                <!-- completa -->
-            </ul>
-        </section>
-        <!-- SECCIÓ 3 - Formulari de registre -->
-        <section>
-            <header>
-                <h3>Registra't com a alumne en un grau: </h3>
-            </header>
-            <p> Si us plau facilita'ns les teves dades </p>
-            <form method="post" action="">
-                <!-- completa -->
-            </form>
-            <hr />
-        </section>
-        <!-- SECCIÓ 4 -  Estadístiques de matriculació per grau -->
-        <section>
-            <header>
-                <h3>Estadístiques de matriculació per graus</h3>
-            </header>
-            <table border="1">
-                <!-- completa -->
-            </table>
-        </section>
-        <!-- SECCIÓ 5 - Peu de pàgina -->
-        <footer>
+        <p> Si us plau facilita'ns les teves dades </p>
+        <form method="post" action="">
+            <label for="nom"> Name: </label> <input type="text" name="nom" id="nom">
+            <br>
+            <label for="pass">Password</label><input type="password" name="pass" id="pass">
+            <select name="grau" id="graus">
+                <option value="1">Enginyeria Informatica</option>
+                <option value="2">Enginyeria de Sistemas de Telecomunicaciones</option>
+            </select>
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+        <hr />
+    </section>
+    <!-- SECCIÓ 4 -  Estadístiques de matriculació per grau -->
+    <section>
+        <header>
+            <h3>Estadístiques de matriculació per graus</h3>
+        </header>
+        <table border="1">
             <!-- completa -->
-        </footer>
-    </body>
+        </table>
+    </section>
+    <!-- SECCIÓ 5 - Peu de pàgina -->
+    <footer>
+        <!-- completa -->
+    </footer>
+</body>
+
 </html>
