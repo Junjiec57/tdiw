@@ -1,60 +1,57 @@
-# TDIW Problems & Solutions
-Tecnologies de desenvolupament per a Internet i Web / Problems and Solutions
+# TDIW
+Tecnologies de desenvolupament per a Internet i Web
 
-SESSIÓ DE PROBLEMES 8 – Maneig de l’estat
+SESSIÓ DE PROBLEMES 8 – protocol HTTP: State Management
 
-## Requirements
-### Operating System
-Use linux Ubuntu or Fedora 
+## Local Requirements
 
-### Install git
-Ubuntu
-```shell
-sudo apt-get install git -y
+1. Locally, you will need to download the document p8_todo.xxx to fillout your answers. Chose one document format.
+
+## Remote Requirements
+
+2. We will use the Apache Server + PHP module you use in the labs:
+
+  1. Start the fortyclient program.  
+  2. Use the VSCode remote connection to connect to the lab using the command:  
+   ```shell
+   ssh -p 170 tdiw-XX@deic-dcX.uab.cat
+   ```
+
+  3. In the public_html directory, create the directory problems.
+    ```text
+    public_html/
+    └── problems/
+    ```
+
+  4. In the public_html/problems directory, create a directory for each student of the group:
+    ```text
+    public_html/
+    └── problems/
+        ├── student1/
+        └── student2/
+    ```
+  5. Optional: You can create a directory for     
+## Working with the new branch
+
+To work with the new branch, you have two options:
+
+### Option 1: Create a subdirectory for each branch:
+1. Create a subdirectory in your directory ``public_html/problems/student1/pX``
+2. From the directory ``pX`` you can either clone the whole repo and select the ``pX`` branch, or just clone the specific branch:
+``` shell
+cd public_html/problems/studentX/pX
+#cloning the whole repo and afterwards position to the branch pX.
+git clone https://github.com/MCarmen/tdiw.git
+#alternatively, clone just the branch pX.
+git clone --branch pX --single-branch https://github.com/MCarmen/tdiw.git
 ```
 
-Fedora
-```shell
-sudo dnf install git -y
+### Option 2: Fetch the new branch from your local repo
+1. Go to the directory where you have clone the ``https://github.com/MCarmen/tdiw.git``repo and fetch the new branches.
+``` shell
+#From VSCode open a terminal and position to the directory where you have the repo
+cd public_html/problems/studentX/tdiw
+git fetch
 ```
 
-### Install docker
-In this session and the following, we must run containers to perform and test the exercises.
-For our environment, we recommended using docker containers. You can install it with https://docs.docker.com/engine/install/ or use the following script https://github.com/docker/docker-install.git.
-```shell
-git clone https://github.com/docker/docker-install.git
-cd docker-install/
-./install.sh
-```
-
-> [!IMPORTANT]  
-> After the installation, add your user to the docker group 
->```shell
->sudo usermod -aG docker ${USER}
->su - ${USER} #You must start a new session to see the change
->```
-
-## Create the environment
-In this repository, you can find the **tdiw.sh** script, which will create two containers, one with Apache + PHP service and another with PostgreSQL DB, and the data needed to perform the P8 exercise. 
-To create the environment, just run the **tdiw.sh** script
-```shell
-./tdiw.sh
-```
-
-## Destroy the environment
-To destroy the tdiw containers, run the following commands:
-```shell
-docker rm -f tdiw-php
-```
-
-## Access to the website
-> [!IMPORTANT]  
-> The Apache workdir is the same path where you ran the script; modify the index.php or add more PHP files in the same path where the script was run
-
-### Cookies with no sessions case
-
-[http://localhost/index.php](http://localhost/index.php)
-
-### Cookies with session case
-
-[http://localhost/sessions.php](http://localhost/sessions.php)
+2. Now, from VSCode, you can checkout the new branch.
